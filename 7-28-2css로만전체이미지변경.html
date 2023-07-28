@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        input[type=radio]{
+            display: none;
+        }
+        *{box-sizing: border-box;}
+        body{
+            background-color: black;
+            height: 100vh;
+            background-image: url(img/mars_bg.jpg);
+            background-size: 100% !important;
+            overflow: hidden;
+            margin: 0;
+        }
+        .mars_border{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            border: 12px solid #fff;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .mars_menu{
+            width: 30px;
+            height: 3px;
+            position: absolute;
+            right: 40px;top: 40px;
+            background-color: #8d3025;
+        }
+        .mars_bg{}
+        .mars_bg img{
+            width: 800px;
+            position: absolute;
+            left: 0;right: 0;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            animation: spin 10s infinite linear;
+        }
+        @keyframes spin {
+            100%{transform: translateY(-50%) rotate(360deg);}
+        }
+        .mars_logo{
+            position: fixed;
+            left: 0;right: 0;top: 50%;
+            margin: auto;
+            width: 100px;
+            height: 120px;
+            transform: translateY(-50%);
+            animation: scaleLogo 1s forwards cubic-bezier(0.75, 0.01, 0, 1) ,
+                        logoIn 1s 1.2s cubic-bezier(0.75, 0.01, 0, 1) forwards;
+        }
+        .mars_logo div{
+            height: 100%;
+            background-size: 100%;
+            position: absolute;
+        }
+        .mars_logo_empty{
+            width: 100%;
+            background-image: url(img/logo.png);
+        }
+        .mars_logo_filled{
+            background-image: url(img/logo_filled.png);
+            width: 0;
+            z-index: -1;
+            bottom: -2px;
+            background-size: auto 100% !important;
+            animation: filled 0.4s 0.8s forwards;
+        }
+        .mars_logo img{
+            width: 100%;
+        }
+
+        @keyframes filled {
+            0%{width: 0;}
+            100%{width: 98%;}
+        }
+        @keyframes scaleLogo {
+            0%{transform: scale(0) translateY(-50%);}
+            20%{transform: scale(1.1) translateY(-50%);}
+            40%{transform: scale(0.98) translateY(-50%);}
+            60%{transform: scale(01.012) translateY(-50%);}
+            80%{transform: scale(0.95) translateY(-50%);}
+            100%{transform: scale(1) translateY(-50%);}
+        }
+        @keyframes logoIn {
+            0%{top: 50px; transform: scale(1) translateY(-50%);}
+            100%{top: calc(0% + 40px);transform: scale(1) translateY(-50%)}
+        }
+        .mars_truck{
+            position: absolute;
+            width: 100px;
+            right: 130px;
+            z-index: 1;
+            bottom: 80px;
+            /* border: 1px solid black; */
+            animation: move 300s infinite linear;
+            transition: all 2s 0.5s cubic-bezier(0.075, 0.01, 0, 1);
+        }
+        @keyframes move {
+            0%{transform: translateX(0px);}
+            50%{transform: translateX(-500px);}
+            100%{transform: translateX(0px);}
+        }
+        .mars_truck_body{
+            transform: scale(0); 
+            animation: scale 1s 1.9s forwards;
+        }
+        @keyframes scale {
+            0%{transform: scale(0);}
+            20%{transform: scale(1.1);}
+            40%{transform: scale(0.9);}
+            60%{transform: scale(1.1);}
+            80%{transform: scale(0.8);}
+            100%{transform: scale(1);}
+        }
+        .mars_truck_body img{width: 100%;}
+
+        .mars_truck_wheel,
+        .mars_truck_wheel_two{
+            transform: scale(0);
+            animation: scale 1s 1.9s forwards;
+            /* border: 1px solid red; */
+        }
+        .mars_truck_wheel img,
+        .mars_truck_wheel_two img{
+            position: absolute;
+            width: 21px;
+            /* bottom: -5px; */
+            right: 71px;
+            transform-origin: 50% 50%;
+            transform: rotate(0deg);
+            animation: spinrevers  2s infinite linear;
+
+        }
+        .mars_truck_wheel_two img{
+            right: 18px;
+        }
+        @keyframes spinrevers {
+            0%{transform: translateY(36px) rotate(0deg);bottom: -14px;}
+            100%{transform: translateY(36px) rotate(360deg);bottom: -14px;}
+        }
+        .mars_parallax,
+        .mars_parallax_two{
+            background-image: url(img/marsp2.png);
+            width: calc(100% - 12px);
+            position: fixed;
+            bottom: 12px;
+            background-position: 0 0;
+            height: 300px;
+            background-repeat: repeat-x;
+            background-size: auto 100% !important;
+            /* border: 1px solid black; */
+            transform: scale(0);
+            animation: scale 1s 1.9s forwards;
+        }
+        .mars_parallax_two{
+            background-image: url(img/marsp1.png);
+            height: 250px;
+            z-index: -1;
+            animation: scale 1s 2.3s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="mars">
+        <div class="mars_border"></div>
+        <div class="mars_menu"></div>
+        <div class="mars_bg">
+        <img src="img/mars_sunburst.png" alt="mars_sunburst">
+    </div><!-- mars_bg -->
+    <div class="mars_logo">
+        <div class="mars_logo_empty"></div>
+        <div class="mars_logo_filled"></div>
+    </div><!-- mars_logo -->
+    <input type="radio" checked="checked" id="index1" name="trigger" >
+    <input type="radio"  id="index2" name="trigger" >
+    <input type="radio"  id="index3" name="trigger" >
+    <input type="radio"  id="index4" name="trigger" >
+    <input type="radio"  id="index5" name="trigger" >
+    <input type="radio"  id="index6" name="trigger" >
+
+    <div class="mars_truck">
+        <div class="mars_truck_wheel">
+            <img src="img/truckwheel.png" alt="truckwheel">
+        </div><!-- mars_truck_wheel -->
+        <div class="mars_truck_wheel_two">
+            <img src="img/truckwheel.png" alt="truckwhee2">
+        </div><!-- mars_truck_wheel -->
+
+        <div class="mars_truck_body">
+            <img src="img/truckbody.png" alt="truckbody">
+        </div><!-- mars_truck_body -->
+    </div><!-- mars_truck -->
+    <div class="mars_parallax"></div>
+    <div class="mars_parallax_two"></div>
+
+    <div class="mars_scene start">
+        <div class="mars_scene_inner">
+            <div class="into">
+                <div class="into_small">
+                    Move
+                </div><!-- into_small -->
+                <div class="intro_to">
+                    To
+                </div><!-- intro_to -->
+                <div class="intro_large">
+                    <span>M</span>
+                    <span>a</span>
+                    <span>r</span>
+                    <span>s</span>
+                </div><!-- intro_large -->
+                <div class="intro_subheading">
+                    "You new home awaits"
+                </div><!-- intro_subheading -->
+                <label for="index2">
+                    Get started
+                    <img src="img/rocket_copy.png" alt="rocket_copy">
+                    <img src="img/rcloud.png" alt="rcloud">
+                </label>
+            </div><!-- into -->
+
+        </div><!-- mars_scene_inner -->
+    </div><!-- mars_scene start -->
+
+    </div><!-- mars -->
+</body>
+</html>

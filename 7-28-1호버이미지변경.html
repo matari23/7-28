@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+    <script lang="java">
+
+    </script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;font-family: 'Belanosima', sans-serif;}
+        /* a{text-decoration: none;color: inherit;} */
+        body{ min-height: 100vh;background-color: #131313; display: flex; justify-content: center;align-items: center;}
+        .container{
+            position: relative;
+        }
+        .card{
+            width: 320px;
+            height: 450px;
+            background-color:#232323;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .card::before{
+            content: "";
+            position: absolute;
+            top: 0;left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #9bdc28;
+            clip-path: circle(150px at 80% 20%);
+            transition: all 0.5s ease-in-out;
+        }
+        .card:hover::before{
+            clip-path: circle(300px at 80% -20%);
+        }
+        .card::after{
+            content: "NIKE";
+            position: absolute;
+            top: 30%;left: -20%;
+            color: rgba(255, 255, 25, 0.05);
+            font-size: 12rem;
+            font-weight: 800;
+            font-style: italic;
+        }
+        .imgbox{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 220px;
+            transform: translateY(-50%);
+            transition: all 0.5s ;
+            z-index: 100;
+        }
+        .imgbox img{
+            position: absolute;
+            top: 50%;left: 50%;
+            transform: translate(-50%,-50%) rotate(-25deg) ;
+            width: 270px;
+        }
+        .card:hover .imgbox{
+            top: 0;
+            transform: translateY(0%);
+        }
+        .contentbox{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            z-index: 10;
+            /* border: 1px solid #fff; */
+            transition: all 1s;
+        }
+        .card:hover .contentbox{
+            height: 210px;
+        }
+        .contentbox h2{
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .contentbox .size,
+        .contentbox .color{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px;
+            /* visibility: hidden; */
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        .card:hover .contentbox .size{
+            opacity: 1;
+            visibility: visible;
+            transition-delay: 0.5s;
+        }
+        .card:hover .contentbox .color{
+            opacity: 1;
+            visibility: visible;
+            transition-delay: 0.7s;
+        }
+        .contentbox .size h3,
+        .contentbox .color h3{
+            color: #fff;
+            font-weight: 300;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-right: 10px;
+            text-transform: uppercase;
+        }
+        .contentbox .size span{
+            width: 26px;
+            height: 26px;
+            line-height: 26px;
+            color: #111;
+            text-align: center;
+            display: inline-block;
+            background-color: #fff;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contentbox .size span:hover{
+            background-color: #9bdc28;
+        }
+        .contentbox .color span{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: yellow;
+            margin: 0 5px;
+        }
+        .contentbox .color span:nth-child(2){background-color: #9bdc28;}
+        .contentbox .color span:nth-child(3){background-color: aqua;}
+        .contentbox .color span:nth-child(4){background-color: #eb06c9;}
+        .contentbox a{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 4px;
+            color: #111;
+            text-decoration: none;
+            margin-top: 15px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .card:hover .contentbox a{
+            opacity: 1;
+            transform: translateY(0px);
+            transition-delay: 0.7s;
+        }
+        .contentbox a:hover{background-color: #9bdc28;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgbox">
+                <img src="img/shoes.webp" alt="shoes">
+            </div><!-- imgbox -->
+
+            <div class="contentbox">
+                <h2>Nike Shoes</h2>
+                <div class="size">
+                    <h3>Size :  </h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div><!-- size -->
+                <div class="color">
+                        <h3>Color:</h3>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- color -->
+                <a href="#">Buy Now</a>
+            </div><!-- contentbox -->
+        </div><!-- card -->
+    </div><!-- container -->
+</body>
+</html>
