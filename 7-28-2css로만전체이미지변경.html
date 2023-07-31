@@ -1,23 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
     <title>Document</title>
     <style type="text/css">
-        input[type=radio]{
-            display: none;
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Medula+One&family=Odibee+Sans&display=swap');
+
+        input[type=radio] {
+            /* display: none; */
         }
-        *{box-sizing: border-box;}
-        body{
+        /* input#index1 */
+        input#index1:checked+input+input+input+input+input+div+div+div+div {
+            transform: scale(1);
+        }
+        input#index1:checked+input+input+input+input+input+div+div{
+            background-position: -2200px 0;
+        }
+        input#index1:checked+input+input+input+input+input+div+div+div{
+            background-position: -1000px 0;
+        }
+        input#index1:not(:checked)+input+input+input+input+input+div+div+div+div {
+            transform: scale(0);
+        }
+
+        input#index1:checked+input+input+input+input+input+div+div+div+div.start .intro_small {
+            animation: in 1s 1s forwards;
+        }
+
+        input#index1:not(:checked)+input+input+input+input+input+div+div+div+div.start .intro_small {
+            animation: out 0.3s 0.6s forwards;
+            transform: scale(1);
+        }
+        input#index1:not(:checked)+input+input+input+input+input+div+div+div+div.start .intro_to {
+            animation: out 0.3s 0.7s forwards;
+            transform: scale(1);
+        }
+
+        input#index1:not(:checked)+input+input+input+input+div+div+div+div.start .intro_large span{
+            transform: scale(1);
+        }
+
+        input#index1:not(:checked)+input+input+input+input+div+div+div+div.start .intro_large span:nth-child(1){
+            animation: out 0.3s 0.5s forwards;
+        }
+        input#index1:not(:checked)+input+input+input+input+div+div+div+div.start .intro_large span:nth-child(2){
+            animation: out 0.3s 0.3s forwards;
+            
+        }
+        input#index1:not(:checked)+input+input+input+input+div+div+div+div.start .intro_large span:nth-child(3){
+            animation: out 0.3s 0.2s forwards;
+            
+        }
+        input#index1:not(:checked)+input+input+input+input+div+div+div+div.start .intro_large span:nth-child(4){
+            animation: out 0.3s 0.1s forwards;
+
+        }
+        input#index1:not(:checked)+input+input+input+input+input+div+div+div+div.start .intro_subheading {
+            animation: out 0.3s 0.1s forwards;
+            transform: scale(1);
+        }
+        input#index1:not(:checked)+input+input+input+input+input+div+div+div+div.start label {
+            animation: out 0.3s forwards;
+            transform: scale(1);
+        }
+        /* input#index2 */
+        input#index2:checked+input+input+input+input+div+div+div+div+div {
+            transform: scale(1);
+        }
+
+        input#index2:not(:checked)+input+input+input+input+div+div+div+div+div+div {
+            transform: scale(0);
+        }
+        input#index2:checked+input+input+input+input+div+div{
+            background-position: -4400px 0;
+        }
+        input#index2:not(:checked)+input+input+input+input+div+div+div{
+            background-position: -2200px 0;
+        }
+        input#index2:checked+input+input+input+input+div{
+            right: 2200px;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment{
+            
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_deveolopment{
+
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_deveolopment_small{
+            transform: scale(0);
+            animation: scale 1s 1.9s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span{transform: scale(0);}
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(1){
+            animation: scale 1s 2.1s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(2){
+            animation: scale 1s 2.15s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(3){
+            animation: scale 1s 2.2s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(4){
+            animation: scale 1s 2.25s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(5){
+            animation: scale 1s 2.3s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(6){
+            animation: scale 1s 2.35s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(7){
+            animation: scale 1s 2.4s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(8){
+            animation: scale 1s 2.45s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(9){
+            animation: scale 1s 2.5s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(10){
+            animation: scale 1s 2.55s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_large span:nth-child(11){
+            animation: scale 1s 2.6s forwards;
+        }
+        input#index2:checked +input+input+input+input+div+div+div+div+div.deveolopment .intro_development_mars img{
+            animation: scale 1s 2.65s forwards;
+            transform: scale(0);
+        }
+
+
+
+        @keyframes in {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes out {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
             background-color: black;
             height: 100vh;
             background-image: url(img/mars_bg.jpg);
             background-size: 100% !important;
             overflow: hidden;
             margin: 0;
+            font-family: 'Pattaya', sans-serif;
         }
-        .mars_border{
+
+        .mars_border {
             position: fixed;
             width: 100%;
             height: 100%;
@@ -25,46 +182,60 @@
             z-index: 1;
             pointer-events: none;
         }
-        .mars_menu{
+
+        .mars_menu {
             width: 30px;
             height: 3px;
             position: absolute;
-            right: 40px;top: 40px;
+            right: 40px;
+            top: 40px;
             background-color: #8d3025;
         }
-        .mars_bg{}
-        .mars_bg img{
+
+        .mars_bg {}
+
+        .mars_bg img {
             width: 800px;
             position: absolute;
-            left: 0;right: 0;
+            left: 0;
+            right: 0;
             margin: auto;
             top: 50%;
             transform: translateY(-50%) rotate(0deg);
             animation: spin 10s infinite linear;
         }
+
         @keyframes spin {
-            100%{transform: translateY(-50%) rotate(360deg);}
+            100% {
+                transform: translateY(-50%) rotate(360deg);
+            }
         }
-        .mars_logo{
+
+        .mars_logo {
             position: fixed;
-            left: 0;right: 0;top: 50%;
+            left: 0;
+            right: 0;
+            top: 50%;
             margin: auto;
             width: 100px;
             height: 120px;
             transform: translateY(-50%);
-            animation: scaleLogo 1s forwards cubic-bezier(0.75, 0.01, 0, 1) ,
-                        logoIn 1s 1.2s cubic-bezier(0.75, 0.01, 0, 1) forwards;
+            animation: scaleLogo 1s forwards cubic-bezier(0.75, 0.01, 0, 1),
+                logoIn 1s 1.2s cubic-bezier(0.75, 0.01, 0, 1) forwards;
         }
-        .mars_logo div{
+
+        .mars_logo div {
             height: 100%;
             background-size: 100%;
             position: absolute;
         }
-        .mars_logo_empty{
+
+        .mars_logo_empty {
             width: 100%;
             background-image: url(img/logo.png);
         }
-        .mars_logo_filled{
+
+        .mars_logo_filled {
             background-image: url(img/logo_filled.png);
             width: 0;
             z-index: -1;
@@ -72,27 +243,60 @@
             background-size: auto 100% !important;
             animation: filled 0.4s 0.8s forwards;
         }
-        .mars_logo img{
+
+        .mars_logo img {
             width: 100%;
         }
 
         @keyframes filled {
-            0%{width: 0;}
-            100%{width: 98%;}
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 98%;
+            }
         }
+
         @keyframes scaleLogo {
-            0%{transform: scale(0) translateY(-50%);}
-            20%{transform: scale(1.1) translateY(-50%);}
-            40%{transform: scale(0.98) translateY(-50%);}
-            60%{transform: scale(01.012) translateY(-50%);}
-            80%{transform: scale(0.95) translateY(-50%);}
-            100%{transform: scale(1) translateY(-50%);}
+            0% {
+                transform: scale(0) translateY(-50%);
+            }
+
+            20% {
+                transform: scale(1.1) translateY(-50%);
+            }
+
+            40% {
+                transform: scale(0.98) translateY(-50%);
+            }
+
+            60% {
+                transform: scale(01.012) translateY(-50%);
+            }
+
+            80% {
+                transform: scale(0.95) translateY(-50%);
+            }
+
+            100% {
+                transform: scale(1) translateY(-50%);
+            }
         }
+
         @keyframes logoIn {
-            0%{top: 50px; transform: scale(1) translateY(-50%);}
-            100%{top: calc(0% + 40px);transform: scale(1) translateY(-50%)}
+            0% {
+                top: 50px;
+                transform: scale(1) translateY(-50%);
+            }
+
+            100% {
+                top: calc(0% + 40px);
+                transform: scale(1) translateY(-50%)
+            }
         }
-        .mars_truck{
+
+        .mars_truck {
             position: absolute;
             width: 100px;
             right: 130px;
@@ -102,51 +306,93 @@
             animation: move 300s infinite linear;
             transition: all 2s 0.5s cubic-bezier(0.075, 0.01, 0, 1);
         }
+
         @keyframes move {
-            0%{transform: translateX(0px);}
-            50%{transform: translateX(-500px);}
-            100%{transform: translateX(0px);}
+            0% {
+                transform: translateX(0px);
+            }
+
+            50% {
+                transform: translateX(-500px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
         }
-        .mars_truck_body{
-            transform: scale(0); 
+
+        .mars_truck_body {
+            transform: scale(0);
             animation: scale 1s 1.9s forwards;
         }
+
         @keyframes scale {
-            0%{transform: scale(0);}
-            20%{transform: scale(1.1);}
-            40%{transform: scale(0.9);}
-            60%{transform: scale(1.1);}
-            80%{transform: scale(0.8);}
-            100%{transform: scale(1);}
+            0% {
+                transform: scale(0);
+            }
+
+            20% {
+                transform: scale(1.1);
+            }
+
+            40% {
+                transform: scale(0.9);
+            }
+
+            60% {
+                transform: scale(1.1);
+            }
+
+            80% {
+                transform: scale(0.8);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
-        .mars_truck_body img{width: 100%;}
+
+        .mars_truck_body img {
+            width: 100%;
+        }
 
         .mars_truck_wheel,
-        .mars_truck_wheel_two{
+        .mars_truck_wheel_two {
             transform: scale(0);
             animation: scale 1s 1.9s forwards;
             /* border: 1px solid red; */
         }
+
         .mars_truck_wheel img,
-        .mars_truck_wheel_two img{
+        .mars_truck_wheel_two img {
             position: absolute;
             width: 21px;
             /* bottom: -5px; */
             right: 71px;
             transform-origin: 50% 50%;
             transform: rotate(0deg);
-            animation: spinrevers  2s infinite linear;
+            animation: spinrevers 2s infinite linear;
 
         }
-        .mars_truck_wheel_two img{
+
+        .mars_truck_wheel_two img {
             right: 18px;
         }
+
         @keyframes spinrevers {
-            0%{transform: translateY(36px) rotate(0deg);bottom: -14px;}
-            100%{transform: translateY(36px) rotate(360deg);bottom: -14px;}
+            0% {
+                transform: translateY(36px) rotate(0deg);
+                bottom: -14px;
+            }
+
+            100% {
+                transform: translateY(36px) rotate(360deg);
+                bottom: -14px;
+            }
         }
+
         .mars_parallax,
-        .mars_parallax_two{
+        .mars_parallax_two {
             background-image: url(img/marsp2.png);
             width: calc(100% - 12px);
             position: fixed;
@@ -159,75 +405,355 @@
             transform: scale(0);
             animation: scale 1s 1.9s forwards;
         }
-        .mars_parallax_two{
+
+        .mars_parallax_two {
             background-image: url(img/marsp1.png);
             height: 250px;
             z-index: -1;
             animation: scale 1s 2.3s forwards;
         }
+
+        .mars_scene {
+            position: absolute;
+            width: 100%;
+            transition: all 0 1s;
+        }
+
+        .mars_scene_inner {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .intro {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%) skewY(-10deg);
+            width: 450px;
+            /* border: 1px solid #fff; */
+            animation: bob 3s 2.9s infinite;
+        }
+
+        @keyframes bob {
+            0% {
+                transform: translateY(-50%) skewY(-10deg)
+            }
+
+            50% {
+                transform: translateY(-52%) skewY(-10deg)
+            }
+
+            100% {
+                transform: translateY(-50%) skewY(-10deg)
+            }
+        }
+
+        .intro_small {
+            font-size: 70px;
+            position: relative;
+            top: 20px;
+            left: 140px;
+            color: #8d3025;
+            font-family: 'Advent Pro', sans-serif;
+            font-style: italic;
+            animation: scale 1s 2s forwards;
+            font-family: 'Medula One', cursive;
+        }
+
+        .intro_to {
+            color: #fff;
+            background-color: #8d3025;
+            font-size: 25px;
+            padding: 11px 20px;
+            position: absolute;
+            border-radius: 255px 15px 255px 15px / 15px 255px 15px 255px;
+            right: 50px;
+            top: 30px;
+            letter-spacing: 5px;
+            transform: scale(0);
+            animation: scale 1s 2.2s forwards;
+        }
+
+        .intro_large {
+            color: #fff;
+            text-shadow: -7px 8px 0 #8d3025;
+            font-size: 130px;
+            font-family: 'Oleo Script Swash Caps', cursive;
+            font-weight: 400;
+        }
+
+        .intro_large span {
+            float: left;
+            transform: scale(0);
+        }
+
+        .intro_large span:nth-child(1) {
+            font-size: 180px;
+            top: -38px;
+            position: relative;
+            top: -40px;
+            animation: scale 1s 2.5s forwards;
+        }
+
+        .intro_large span:nth-child(2) {
+            animation: scale 1s 2.6s forwards;
+
+        }
+
+        .intro_large span:nth-child(3) {
+            animation: scale 1s 2.7s forwards;
+
+        }
+
+        .intro_large span:nth-child(4) {
+            animation: scale 1s 2.8s forwards;
+        }
+
+        .intro_subheading {
+            color: #61221b;
+            font-size: 16px;
+            position: relative;
+            top: -70px;
+            left: 150px;
+            font-family: 'Pattaya', sans-serif;
+            clear: both;
+            animation: scale 1s 2.9s forwards;
+            transform-origin: -10px;
+            transform: scale(0);
+        }
+
+        .mars_scene.start .mars_scene_inner label {
+            color: #8d3025;
+            background-color: #fff;
+            padding: 20px 70px 20px 30px;
+            position: absolute;
+            box-shadow: -4px 6px 0 #8d3025;
+            border-radius: 255px 15px 255px 15px / 15px 255px 15px 255px;
+            width: 180px;
+            top: 250px;
+            right: 0;
+            left: 350px;
+            margin: 0 auto;
+            cursor: pointer;
+            font-family: 'Pattaya', sans-serif;
+            letter-spacing: 1px;
+            transition: all 0.5s;
+            transform: scale(0);
+            animation: scale 1s 2.8s forwards;
+        }
+
+        .mars_scene.start .mars_scene_inner label::after {
+            display: block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: #ad402b;
+            position: absolute;
+            right: 26px;
+            bottom: 10px;
+            transition: all 0.3s;
+        }
+
+        .mars_scene.start .mars_scene_inner label:hover {
+            box-shadow: -6px 8px 0 #8d3025;
+        }
+
+        .mars_scene.start .mars_scene_inner label:hover::after {
+            height: 30px;
+        }
+
+        .mars_scene.start .mars_scene_inner label:hover .rocket {
+            top: -40px;
+        }
+
+        .mars_scene.start .mars_scene_inner label .rocket {
+            position: absolute;
+            width: 33px;
+            right: 16px;
+            top: -13px;
+            transition: all 0.5s;
+        }
+
+        .mars_scene.start .mars_scene_inner label .cloud {
+            position: absolute;
+            width: 61px;
+            right: 0;
+            top: 36px;
+            transform: rotate(5deg);
+        }
+        .mars_scene.development .intro_deveolopment{
+            position: absolute;
+            left: 0;top: 50%;right: 0;
+            margin: auto;
+            transform: translateY(-50%) skewY(-10deg);
+            /* border: 1px solid black; */
+            width: 450px;
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_small{
+            font-size: 50px;
+            position: relative;
+            left: 80px;
+            top: 15px;
+            color: #8d3025;
+            transform: scale(0);
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large{
+            color: #fff;
+            font-size: 70px;
+            text-shadow: -4px 5px 0 #8d3025;
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span{
+            float: left;
+            transform: scale(0);
+        }
+        /* .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(1){
+            font-size: 100px;
+            position: relative;
+            top: -34px;
+            animation: scale 0.3s 3s forwards;
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(2){
+            animation: scale 0.3s 3.1s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(3){
+            animation: scale 0.3s 3.2s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(4){
+            animation: scale 0.3s 3.3s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(5){
+            animation: scale 0.3s 3.4s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(6){
+            animation: scale 0.3s 3.5s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(7){
+            animation: scale 0.3s 3.6s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(8){
+            animation: scale 0.3s 3.7s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(9){
+            animation: scale 0.3s 3.8s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(10){
+            animation: scale 0.3s 3.9s forwards;
+            
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_large span:nth-child(11){
+            animation: scale 0.3s 4s forwards;
+
+        } */
+        .mars_scene.development .intro_deveolopment .intro_development_mars{
+            transform: skew(10deg);
+            margin-top: 70px;
+        }
+        .mars_scene.development .intro_deveolopment .intro_development_mars img{
+            width: 300px;
+        }
     </style>
+
 </head>
+
 <body>
     <div class="mars">
         <div class="mars_border"></div>
         <div class="mars_menu"></div>
         <div class="mars_bg">
-        <img src="img/mars_sunburst.png" alt="mars_sunburst">
-    </div><!-- mars_bg -->
-    <div class="mars_logo">
-        <div class="mars_logo_empty"></div>
-        <div class="mars_logo_filled"></div>
-    </div><!-- mars_logo -->
-    <input type="radio" checked="checked" id="index1" name="trigger" >
-    <input type="radio"  id="index2" name="trigger" >
-    <input type="radio"  id="index3" name="trigger" >
-    <input type="radio"  id="index4" name="trigger" >
-    <input type="radio"  id="index5" name="trigger" >
-    <input type="radio"  id="index6" name="trigger" >
+            <img src="img/mars_sunburst.png" alt="mars_sunburst">
+        </div><!-- mars_bg -->
+        <div class="mars_logo">
+            <div class="mars_logo_empty"></div>
+            <div class="mars_logo_filled"></div>
+        </div><!-- mars_logo -->
+        <input type="radio" checked="checked" id="index1" name="trigger">
+        <input type="radio" id="index2" name="trigger">
+        <input type="radio" id="index3" name="trigger">
+        <input type="radio" id="index4" name="trigger">
+        <input type="radio" id="index5" name="trigger">
+        <input type="radio" id="index6" name="trigger">
 
-    <div class="mars_truck">
-        <div class="mars_truck_wheel">
-            <img src="img/truckwheel.png" alt="truckwheel">
-        </div><!-- mars_truck_wheel -->
-        <div class="mars_truck_wheel_two">
-            <img src="img/truckwheel.png" alt="truckwhee2">
-        </div><!-- mars_truck_wheel -->
+        <div class="mars_truck">
+            <div class="mars_truck_wheel">
+                <img src="img/truckwheel.png" alt="truckwheel">
+            </div><!-- mars_truck_wheel -->
+            <div class="mars_truck_wheel_two">
+                <img src="img/truckwheel.png" alt="truckwhee2">
+            </div><!-- mars_truck_wheel -->
 
-        <div class="mars_truck_body">
-            <img src="img/truckbody.png" alt="truckbody">
-        </div><!-- mars_truck_body -->
-    </div><!-- mars_truck -->
-    <div class="mars_parallax"></div>
-    <div class="mars_parallax_two"></div>
+            <div class="mars_truck_body">
+                <img src="img/truckbody.png" alt="truckbody">
+            </div><!-- mars_truck_body -->
+        </div><!-- mars_truck -->
+        <div class="mars_parallax"></div>
+        <div class="mars_parallax_two"></div>
 
-    <div class="mars_scene start">
-        <div class="mars_scene_inner">
-            <div class="into">
-                <div class="into_small">
-                    Move
-                </div><!-- into_small -->
-                <div class="intro_to">
-                    To
-                </div><!-- intro_to -->
-                <div class="intro_large">
-                    <span>M</span>
-                    <span>a</span>
-                    <span>r</span>
-                    <span>s</span>
-                </div><!-- intro_large -->
-                <div class="intro_subheading">
-                    "You new home awaits"
-                </div><!-- intro_subheading -->
-                <label for="index2">
-                    Get started
-                    <img src="img/rocket_copy.png" alt="rocket_copy">
-                    <img src="img/rcloud.png" alt="rcloud">
-                </label>
-            </div><!-- into -->
+        <div class="mars_scene start">
+            <div class="mars_scene_inner">
+                <div class="intro">
+                    <div class="intro_small">
+                        Move
+                    </div><!-- into_small -->
+                    <div class="intro_to">
+                        To
+                    </div><!-- intro_to -->
+                    <div class="intro_large">
+                        <span>M</span>
+                        <span>a</span>
+                        <span>r</span>
+                        <span>s</span>
+                    </div><!-- intro_large -->
+                    <div class="intro_subheading">
+                        "You new home awaits"
+                    </div><!-- intro_subheading -->
+                    <label for="index2">
+                        Get started
+                        <img src="img/rocket_copy.png" alt="rocket_copy" class="rocket">
+                        <img src="img/rcloud.png" alt="rcloud" class="cloud">
+                    </label>
+                </div><!-- intro -->
 
-        </div><!-- mars_scene_inner -->
-    </div><!-- mars_scene start -->
+            </div><!-- mars_scene_inner -->
+        </div><!-- mars_scene start -->
+        <div class="mars_scene development">
+            <div class="mars_scene_inner">
+                <div class="intro_deveolopment">
+                    <div class="intro_development_small">
+                        Choose A
+                    </div><!-- intro_development_small -->
+                    <div class="intro_development_large">
+                        <span>D</span>
+                        <span>e</span>
+                        <span>v</span>
+                        <span>e</span>
+                        <span>l</span>
+                        <span>o</span>
+                        <span>p</span>
+                        <span>m</span>
+                        <span>e</span>
+                        <span>n</span>
+                        <span>t</span>
+                    </div><!-- intro_development_large -->
+                    <div class="intro_development_mars">
+                        <label for="index3">
+                            <img src="img/mars_big.png" alt="mars_big">
+                        </label>
+                    </div><!-- intro_development_mars -->
+                </div><!-- intro_deveolopment -->
+            </div><!-- mars_scene_inner -->
+        </div><!-- mars_scene development -->
 
     </div><!-- mars -->
 </body>
+
 </html>
